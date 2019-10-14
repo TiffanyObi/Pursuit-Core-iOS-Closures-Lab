@@ -6,6 +6,17 @@ import UIKit
 
 
 // Your function here
+func applyKTimes (integer: K, closure: ()->() ) {
+    var myVal = 0
+    if _ 
+    
+    
+    return
+
+print(myVal == 5, "Expected myVal to be five, but was \(myVal)")
+}
+
+//applyKTimes(:5)
 
 // Uncomment out the following lines to check your solution
 
