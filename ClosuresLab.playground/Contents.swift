@@ -6,38 +6,52 @@ import UIKit
 
 
 // Your function here
-func applyKTimes (integer: K, closure: ()->() ) {
-    var myVal = 0
-    if _ 
+func applyKTimes (K: Int, closure: ()) {
     
-    
-    return
-
-print(myVal == 5, "Expected myVal to be five, but was \(myVal)")
+    for _ in 0..<K {
+        closure
+    }
 }
 
-//applyKTimes(:5)
-
 // Uncomment out the following lines to check your solution
-
-//var myVal = 0
-//applyKTimes(5) {
-//    myVal += 1
+var myVal = 0
+//var close = {()->()in
+    //myVal += 1
 //}
+applyKTimes(K:5, closure:()){
+    
+
+
 //assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
+
+
 
 
 // Question Two
 
-// Write a function called multiples(of:in) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
+// Write a function called multiples(of:int) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
 
 // Your function here
 
+func multiples(of n:Int,array:[Int]) -> [Int]  {
+    var newArrayOfMultiples:[Int] = []
+    for num in array {
+        if num % n == 0 {
+            newArrayOfMultiples.append(num)
+        }
+}
+    return newArrayOfMultiples
+}
+
+
+
 // Uncomment out the following lines to check your solution
 
-//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-//let expectedOutputTwo = [3, 6, 9, 3, 12]
-//let outputTwo = multiples(of: 3, in: numbers)
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+let expectedOutputTwo = [3, 6, 9, 3, 12]
+let outputTwo = multiples(of: 4, array: numbers)
+
+print(outputTwo)
 //assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
