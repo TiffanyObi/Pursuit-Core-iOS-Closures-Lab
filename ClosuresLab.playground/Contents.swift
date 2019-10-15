@@ -6,21 +6,24 @@ import UIKit
 
 
 // Your function here
-func applyKTimes (K: Int, closure: ()) {
-    
-    for _ in 0..<K {
-        closure
-    }
-}
+//func applyKTimes (K: Int, closure: ()->()) {
+//    for _ in 0..<K {
+//        closure
+//    }
+//}
 
 // Uncomment out the following lines to check your solution
-var myVal = 0
-//var close = {()->()in
-    //myVal += 1
+//var myVal = 0
+//
+//myVal += 1
+//
+//applyKTimes(5) {
+//    var myVal = 0
+//
+//    myVal += 1
+//
 //}
-applyKTimes(K:5, closure:()){
     
-
 
 //assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
@@ -60,6 +63,28 @@ print(outputTwo)
 // Write a function called largestValue(in:) that finds the largest Int in an array of Ints. Use reduce to solve this exercise.
 
 // Your function here
+func largestValue(in arrayOfInts : [Int])->(Int) {
+    
+    guard let first = arrayOfInts.first else {return 1} // ??  // ! // if-let // guard-let
+    
+//    let reducething = arrayOfInts.reduce(first) { (prev, curr) in
+//        if prev > curr {
+//            return curr
+//        } else {
+//            return prev
+//        }
+//
+//    }
+                                                  30 < 8
+    let reducething = arrayOfInts.reduce(first, {$0 < $1 ? $0 : $1 })
+    
+    
+    
+    return reducething
+}
+
+
+print(largestValue(in: [1,20,3,4,5,6,7,8,9,-1]))
 
 // Uncomment out the following lines to check your solution
 
